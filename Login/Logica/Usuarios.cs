@@ -96,11 +96,11 @@ namespace Logica
          private static DatosTableAdapter Adaptador = new DatosTableAdapter();
         public void AgregarUsuarios()
         {
-            Adaptador.spr_AgregarUsuarios(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña);
+            Adaptador.spr_AgregarUsuarios(Nombres, Apellidos, "Telefono", Correo, Usuario, Contraseña);
         }
         public void ActualizarDatos()
         {
-            Adaptador.spr_ActualizarDatos(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña);
+            Adaptador.spr_ActualizarDatos(Nombres, Apellidos, "Telefono", Correo, Contraseña, Usuario);
         }
         public void EliminarUsuarios()
         {
