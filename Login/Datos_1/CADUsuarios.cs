@@ -11,9 +11,18 @@ namespace Datos_1
     {
         private static DatosTableAdapter Adaptador = new DatosTableAdapter;
 
-        public static bool AgregarUsuarios(string Usuario, string Contraseña)
+        public static bool Autenticacion(string Usuario, string Clave)
         {
-            if(Adaptador.spr_AgregarUsuarios(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña))
+
+
+            if (Adaptador.spr_Autenticacion(Usuario, Clave) == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
