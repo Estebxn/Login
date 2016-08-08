@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CADUsuarios.cs" />
+    <Compile Include="DSLogin.cs">
+      <DependentUpon>DSLogin.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSLogin.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
