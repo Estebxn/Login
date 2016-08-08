@@ -8,6 +8,89 @@ namespace Logica
 {
     public class Usuarios
     {
-        
+        string Nombres;
+        string Apellidos;
+        long Telefono;
+        string Correo;
+        string Usuario;
+        string Contraseña;
+
+        public string Nombres1
+        {
+            get
+            {
+                return Nombres;
+            }
+
+            set
+            {
+                Nombres = value;
+            }
+        }
+
+        public string Apellidos1
+        {
+            get
+            {
+                return Apellidos;
+            }
+
+            set
+            {
+                Apellidos = value;
+            }
+        }
+
+        public long Telefono1
+        {
+            get
+            {
+                return Telefono;
+            }
+
+            set
+            {
+                Telefono = value;
+            }
+        }
+
+        public string Correo1
+        {
+            get
+            {
+                return Correo;
+            }
+
+            set
+            {
+                Correo = value;
+            }
+        }
+
+        public string Usuario1
+        {
+            get
+            {
+                return Usuario;
+            }
+
+            set
+            {
+                Usuario = value;
+            }
+        }
+
+        public string Contraseña1
+        {
+            get
+            {
+                return Contraseña;
+            }
+
+            set
+            {
+                Contraseña = value;
+            }
+        }
     }
 }
