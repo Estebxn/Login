@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos_1.DSLoginTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -91,6 +92,20 @@ namespace Logica
             {
                 Contraseña = value;
             }
+        }
+         private static DatosTableAdapter Adaptador = new DatosTableAdapter();
+        public void AgregarUsuarios()
+        {
+
+            Adaptador.spr_AgregarUsuarios(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña);
+        }
+        public void ActualizarDatos()
+        {
+            Adaptador.spr_ActualizarDatos(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña);
+        }
+        public void EliminarUsuarios()
+        {
+            Adaptador.spr_EliminarUsuarios(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña);
         }
     }
 }

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Registro : Form
+    public partial class frmPaginaPrincipal : Form
     {
-        public Registro()
+        public frmPaginaPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnRegistrarse_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblInicioSesion = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@
             this.btnRegistro = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInicioSesion
@@ -77,6 +80,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(141, 159);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 4;
             // 
@@ -88,6 +92,7 @@
             this.btnRegistro.TabIndex = 5;
             this.btnRegistro.Text = "&Registrarme";
             this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // btnEntrar
             // 
@@ -97,6 +102,7 @@
             this.btnEntrar.TabIndex = 6;
             this.btnEntrar.Text = "&Ingresar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnSalir
             // 
@@ -106,6 +112,11 @@
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "&Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Login
             // 
@@ -122,6 +133,7 @@
             this.Controls.Add(this.lblInicioSesion);
             this.Name = "Login";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,6 +149,7 @@
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

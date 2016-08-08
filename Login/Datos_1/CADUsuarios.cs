@@ -9,7 +9,8 @@ namespace Datos_1
 {
     public class CADUsuarios
     {
-        private static DatosTableAdapter Adaptador = new DatosTableAdapter;
+        private static DatosTableAdapter Adaptador = new DatosTableAdapter();
+
 
         public static bool Autenticacion(string Usuario, string Clave)
         {
@@ -24,5 +25,6 @@ namespace Datos_1
                 return true;
             }
         }
+       
     }
 }

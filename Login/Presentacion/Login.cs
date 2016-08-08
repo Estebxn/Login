@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos_1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,51 @@ namespace Presentacion
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        Registro oRegistro = new Registro();
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            oRegistro.Show();
+            this.Hide();
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "")
+            {
+                errorProvider1.SetError(txtUser, "Debe ingresar un Usuario");
+                txtUser.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtUser, "");
+
+            if (txtPassword.Text == "")
+            {
+                errorProvider1.SetError(txtPassword, "Debe ingresar una Clave");
+                txtPassword.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtPassword, "");
+
+            if (!CADUsuarios.Autenticacion(txtUser.Text, txtPassword.Text))
+            {
+
+                MessageBox.Show("usuario o clave no validos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                txtUser.Text = "";
+                txtPassword.Text = "";
+                txtUser.Focus();
+                return;
+            }
+            frmPaginaPrincipal PaginaPrincipal = new frmPaginaPrincipal();
+            PaginaPrincipal.Show();
+            this.Hide();
         }
     }
 }

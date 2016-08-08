@@ -10,3 +10,6 @@ C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacio
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.frmPaginaPrincipal.resources
+C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\bin\Debug\Datos_1.dll
+C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\bin\Debug\Datos_1.pdb
