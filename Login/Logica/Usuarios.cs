@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    public class Class1
+    public class Usuarios
     {
+        
     }
 }
