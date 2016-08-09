@@ -35,7 +35,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 114);
+            this.label2.Location = new System.Drawing.Point(12, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(813, 165);
             this.label2.TabIndex = 0;
@@ -54,7 +54,7 @@
 
         #endregion
 
-        private Login_1DataSet login_1DataSet;
+        //private Login_1DataSet login_1DataSet;
         private System.Windows.Forms.BindingSource login1DataSetBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

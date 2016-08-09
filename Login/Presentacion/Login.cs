@@ -23,7 +23,7 @@ namespace Presentacion
             this.Close();
         }
 
-        Registro oRegistro = new Registro();
+        frmRegistro oRegistro = new frmRegistro();
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             oRegistro.Show();
@@ -48,7 +48,7 @@ namespace Presentacion
             }
             errorProvider1.SetError(txtPassword, "");
 
-            if (!CADUsuarios.Autenticacion(txtUser.Text, txtPassword.Text))
+            if (!CADUsuarios.ValidarUsuario(txtUser.Text, txtPassword.Text))
             {
 
                 MessageBox.Show("usuario o clave no validos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

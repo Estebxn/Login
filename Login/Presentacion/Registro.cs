@@ -11,26 +11,20 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Registro : Form
+    public partial class frmRegistro : Form
     {
-        ValidacionCampos VCampos = new ValidacionCampos();
-        public Registro()
+        public frmRegistro()
         {
             InitializeComponent();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         Usuarios oUsuaarios = new Usuarios();
-        private void btnRegistrarse_Click(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
-            oUsuaarios.AgregarUsuarios();
+            oUsuaarios.AgregarUsuario(txtNombres.Text, txtApellidos.Text, txtTelefono.Text, txtCorreo.Text, txtUser.Text, txtPassword.Text);
         }
 
-        private void btnLimpiarFormulario_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtNombres.Clear();
             txtApellidos.Clear();
@@ -40,29 +34,9 @@ namespace Presentacion
             txtPassword.Clear();
         }
 
-        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            VCampos.Letras(e);
-        }
-
-        private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            VCampos.Letras(e);
-        }
-
-        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            VCampos.Numeros(e);
-        }
-
-        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            VCampos.LetrasNumeros(e);
-        }
-
-        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            VCampos.LetrasNumeros(e);
+            this.Close();
         }
     }
 }

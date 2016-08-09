@@ -1,4 +1,3 @@
-C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\bin\Debug\Presentacion.exe.config
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\bin\Debug\Presentacion.exe
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\bin\Debug\Presentacion.pdb
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\bin\Debug\Logica.dll
@@ -6,7 +5,6 @@ C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\bin\Debug\Logica.pdb
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.Login.resources
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
-C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.Registro.resources
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.pdb
@@ -28,3 +26,4 @@ C:\Users\SENA\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.frm
 C:\Users\SENA\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
 C:\Users\SENA\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.Registro.resources
 C:\Users\SENA\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.frmRegistro.resources
