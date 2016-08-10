@@ -214,6 +214,7 @@
             this.Controls.Add(this.lblNombres);
             this.Controls.Add(this.lblRegistrate);
             this.Name = "frmRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario De Registro";
             this.ResumeLayout(false);
             this.PerformLayout();
