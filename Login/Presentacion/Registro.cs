@@ -38,5 +38,36 @@ namespace Presentacion
         {
             this.Close();
         }
+
+        ValidacionCampos Validar = new ValidacionCampos();
+        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.Letras(e);
+        }
+
+        private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.Letras(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.Numeros(e);
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.LetrasNumeros(e);
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.LetrasNumeros(e);
+        }
     }
 }

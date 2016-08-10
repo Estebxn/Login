@@ -60,7 +60,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(498, 472);
+            this.btnCancel.Location = new System.Drawing.Point(498, 416);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 63;
@@ -70,7 +70,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(364, 472);
+            this.btnLimpiar.Location = new System.Drawing.Point(364, 416);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(103, 23);
             this.btnLimpiar.TabIndex = 62;
@@ -80,7 +80,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(156, 472);
+            this.btnActualizar.Location = new System.Drawing.Point(156, 416);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 61;
@@ -196,7 +196,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(256, 472);
+            this.btnEliminar.Location = new System.Drawing.Point(256, 416);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 64;
@@ -206,7 +206,7 @@
             // 
             // frmPaginaPrincipal
             // 
-            this.ClientSize = new System.Drawing.Size(677, 523);
+            this.ClientSize = new System.Drawing.Size(686, 496);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLimpiar);
