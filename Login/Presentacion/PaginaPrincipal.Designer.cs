@@ -92,8 +92,10 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(473, 329);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 60;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtUser
             // 
@@ -101,6 +103,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 20);
             this.txtUser.TabIndex = 59;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // txtCorreo
             // 
@@ -108,6 +111,7 @@
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(100, 20);
             this.txtCorreo.TabIndex = 58;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // txtTelefono
             // 
@@ -115,6 +119,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 57;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtApellidos
             // 
@@ -122,6 +127,7 @@
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(100, 20);
             this.txtApellidos.TabIndex = 56;
+            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
             // 
             // txtNombres
             // 
@@ -129,6 +135,7 @@
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(100, 20);
             this.txtNombres.TabIndex = 55;
+            this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
             // 
             // lblPassword
             // 
@@ -206,6 +213,7 @@
             // 
             // frmPaginaPrincipal
             // 
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(686, 496);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCancel);

@@ -41,7 +41,38 @@ namespace Presentacion
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        ValidacionCampos Validacion = new ValidacionCampos();
+        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.Letras(e);
+        }
+
+        private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.Letras(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.Numeros(e);
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.LetrasNumeros(e);
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.LetrasNumeros(e);
         }
     }
 }

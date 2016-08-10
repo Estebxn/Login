@@ -30,7 +30,7 @@
         {
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -48,6 +48,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(393, 419);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -66,15 +67,15 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // btnIngresar
+            // btnRegistrar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(122, 419);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(75, 23);
-            this.btnIngresar.TabIndex = 45;
-            this.btnIngresar.Text = "&Registrar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnRegistrar.Location = new System.Drawing.Point(122, 419);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 45;
+            this.btnRegistrar.Text = "&Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // txtPassword
             // 
@@ -191,12 +192,14 @@
             // 
             // frmRegistro
             // 
+            this.AcceptButton = this.btnRegistrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(611, 509);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.txtCorreo);
@@ -221,7 +224,7 @@
 
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtCorreo;
