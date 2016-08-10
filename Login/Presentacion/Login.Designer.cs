@@ -54,7 +54,7 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(74, 116);
+            this.lblUser.Location = new System.Drawing.Point(74, 121);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(43, 13);
             this.lblUser.TabIndex = 1;
@@ -63,7 +63,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(74, 166);
+            this.lblPassword.Location = new System.Drawing.Point(74, 171);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(61, 13);
             this.lblPassword.TabIndex = 2;
@@ -71,14 +71,14 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(141, 113);
+            this.txtUser.Location = new System.Drawing.Point(141, 118);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 20);
             this.txtUser.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(141, 159);
+            this.txtPassword.Location = new System.Drawing.Point(141, 164);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
@@ -106,6 +106,7 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalir.Location = new System.Drawing.Point(232, 259);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
@@ -120,8 +121,10 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.btnEntrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(364, 336);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEntrar);
@@ -131,6 +134,7 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblInicioSesion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
