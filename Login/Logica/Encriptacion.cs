@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos_1.DSLoginTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -18,6 +19,12 @@ namespace Logica
             stream = md5.ComputeHash(encoding.GetBytes(str));
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
+        }
+
+        private static DatosTableAdapter Adaptador = new DatosTableAdapter();
+        public void Encriptar(string Usuario, string Contraseña)
+        {
+            Adaptador.spr_Encriptacion(Usuario, Contraseña);
         }
     }
 }

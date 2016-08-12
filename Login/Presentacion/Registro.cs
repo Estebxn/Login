@@ -19,9 +19,11 @@ namespace Presentacion
         }
 
         Usuarios oUsuaarios = new Usuarios();
+        Encriptacion Encriptar = new Encriptacion();
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             oUsuaarios.AgregarUsuario(txtNombres.Text, txtApellidos.Text, txtTelefono.Text, txtCorreo.Text, txtUser.Text, txtPassword.Text);
+            Encriptar.Encriptar(txtUser.Text, Encriptacion.GetMD5(txtPassword.Text));
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
