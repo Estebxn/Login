@@ -6,3 +6,10 @@
     {
     }
 }
+
+namespace Datos_1.DSLoginTableAdapters {
+    
+    
+    public partial class DatosTableAdapter {
+    }
+}

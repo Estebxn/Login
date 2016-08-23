@@ -361,6 +361,8 @@ namespace Datos_1 {
             
             private global::System.Data.DataColumn columnContraseña;
             
+            private global::System.Data.DataColumn columnTipoUsuario;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DatosDataTable() {
@@ -444,6 +446,14 @@ namespace Datos_1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TipoUsuarioColumn {
+                get {
+                    return this.columnTipoUsuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -479,7 +489,7 @@ namespace Datos_1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DatosRow AddDatosRow(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña) {
+            public DatosRow AddDatosRow(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario) {
                 DatosRow rowDatosRow = ((DatosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombres,
@@ -487,7 +497,8 @@ namespace Datos_1 {
                         Telefono,
                         Correo,
                         Usuario,
-                        Contraseña};
+                        Contraseña,
+                        TipoUsuario};
                 rowDatosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDatosRow);
                 return rowDatosRow;
@@ -523,6 +534,7 @@ namespace Datos_1 {
                 this.columnCorreo = base.Columns["Correo"];
                 this.columnUsuario = base.Columns["Usuario"];
                 this.columnContraseña = base.Columns["Contraseña"];
+                this.columnTipoUsuario = base.Columns["TipoUsuario"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,6 +552,8 @@ namespace Datos_1 {
                 base.Columns.Add(this.columnUsuario);
                 this.columnContraseña = new global::System.Data.DataColumn("Contraseña", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnContraseña);
+                this.columnTipoUsuario = new global::System.Data.DataColumn("TipoUsuario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipoUsuario);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUsuario}, true));
                 this.columnNombres.MaxLength = 50;
@@ -1384,6 +1398,22 @@ namespace Datos_1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TipoUsuario {
+                get {
+                    try {
+                        return ((string)(this[this.tableDatos.TipoUsuarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TipoUsuario\' in table \'Datos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDatos.TipoUsuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNombresNull() {
                 return this.IsNull(this.tableDatos.NombresColumn);
             }
@@ -1440,6 +1470,18 @@ namespace Datos_1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetContraseñaNull() {
                 this[this.tableDatos.ContraseñaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTipoUsuarioNull() {
+                return this.IsNull(this.tableDatos.TipoUsuarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTipoUsuarioNull() {
+                this[this.tableDatos.TipoUsuarioColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3449,15 +3491,6 @@ SELECT IdDiagnostico, IdEmpleado, IdPaciente, Diagnostico FROM Diagnostico WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(DSLogin dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._datosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Datos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._datosTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._asignarCitaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.AsignarCita.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -3476,6 +3509,15 @@ SELECT IdDiagnostico, IdEmpleado, IdPaciente, Diagnostico FROM Diagnostico WHERE
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._datosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Datos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._datosTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -3486,14 +3528,6 @@ SELECT IdDiagnostico, IdEmpleado, IdPaciente, Diagnostico FROM Diagnostico WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(DSLogin dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._datosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Datos.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._datosTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._asignarCitaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.AsignarCita.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -3510,6 +3544,14 @@ SELECT IdDiagnostico, IdEmpleado, IdPaciente, Diagnostico FROM Diagnostico WHERE
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._datosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Datos.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._datosTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -3520,6 +3562,14 @@ SELECT IdDiagnostico, IdEmpleado, IdPaciente, Diagnostico FROM Diagnostico WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DSLogin dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._datosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Datos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._datosTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._diagnosticoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Diagnostico.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -3533,14 +3583,6 @@ SELECT IdDiagnostico, IdEmpleado, IdPaciente, Diagnostico FROM Diagnostico WHERE
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._asignarCitaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._datosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Datos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._datosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

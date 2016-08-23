@@ -289,6 +289,32 @@ SELECT IdDiagnostico, IdEmpleado, IdPaciente, Diagnostico FROM Diagnostico WHERE
   <xs:element name="DSLogin" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSLogin" msprop:Generator_UserDSName="DSLogin">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AsignarCita" msprop:Generator_TableClassName="AsignarCitaDataTable" msprop:Generator_TableVarName="tableAsignarCita" msprop:Generator_TablePropName="AsignarCita" msprop:Generator_RowDeletingName="AsignarCitaRowDeleting" msprop:Generator_RowChangingName="AsignarCitaRowChanging" msprop:Generator_RowEvHandlerName="AsignarCitaRowChangeEventHandler" msprop:Generator_RowDeletedName="AsignarCitaRowDeleted" msprop:Generator_UserTableName="AsignarCita" msprop:Generator_RowChangedName="AsignarCitaRowChanged" msprop:Generator_RowEvArgName="AsignarCitaRowChangeEvent" msprop:Generator_RowClassName="AsignarCitaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdPaciente" msprop:Generator_ColumnVarNameInTable="columnIdPaciente" msprop:Generator_ColumnPropNameInRow="IdPaciente" msprop:Generator_ColumnPropNameInTable="IdPacienteColumn" msprop:Generator_UserColumnName="IdPaciente" type="xs:long" />
+              <xs:element name="IdEmpleado" msprop:Generator_ColumnVarNameInTable="columnIdEmpleado" msprop:Generator_ColumnPropNameInRow="IdEmpleado" msprop:Generator_ColumnPropNameInTable="IdEmpleadoColumn" msprop:Generator_UserColumnName="IdEmpleado" type="xs:long" minOccurs="0" />
+              <xs:element name="FechaSolicitud" msprop:Generator_ColumnVarNameInTable="columnFechaSolicitud" msprop:Generator_ColumnPropNameInRow="FechaSolicitud" msprop:Generator_ColumnPropNameInTable="FechaSolicitudColumn" msprop:Generator_UserColumnName="FechaSolicitud" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaCita" msprop:Generator_ColumnVarNameInTable="columnFechaCita" msprop:Generator_ColumnPropNameInRow="FechaCita" msprop:Generator_ColumnPropNameInTable="FechaCitaColumn" msprop:Generator_UserColumnName="FechaCita" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Diagnostico" msprop:Generator_TableClassName="DiagnosticoDataTable" msprop:Generator_TableVarName="tableDiagnostico" msprop:Generator_TablePropName="Diagnostico" msprop:Generator_RowDeletingName="DiagnosticoRowDeleting" msprop:Generator_RowChangingName="DiagnosticoRowChanging" msprop:Generator_RowEvHandlerName="DiagnosticoRowChangeEventHandler" msprop:Generator_RowDeletedName="DiagnosticoRowDeleted" msprop:Generator_UserTableName="Diagnostico" msprop:Generator_RowChangedName="DiagnosticoRowChanged" msprop:Generator_RowEvArgName="DiagnosticoRowChangeEvent" msprop:Generator_RowClassName="DiagnosticoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdDiagnostico" msprop:Generator_ColumnVarNameInTable="columnIdDiagnostico" msprop:Generator_ColumnPropNameInRow="IdDiagnostico" msprop:Generator_ColumnPropNameInTable="IdDiagnosticoColumn" msprop:Generator_UserColumnName="IdDiagnostico" type="xs:long" />
+              <xs:element name="IdEmpleado" msprop:Generator_ColumnVarNameInTable="columnIdEmpleado" msprop:Generator_ColumnPropNameInRow="IdEmpleado" msprop:Generator_ColumnPropNameInTable="IdEmpleadoColumn" msprop:Generator_UserColumnName="IdEmpleado" type="xs:long" minOccurs="0" />
+              <xs:element name="IdPaciente" msprop:Generator_ColumnVarNameInTable="columnIdPaciente" msprop:Generator_ColumnPropNameInRow="IdPaciente" msprop:Generator_ColumnPropNameInTable="IdPacienteColumn" msprop:Generator_UserColumnName="IdPaciente" type="xs:long" minOccurs="0" />
+              <xs:element name="Diagnostico" msprop:Generator_ColumnVarNameInTable="columnDiagnostico" msprop:Generator_ColumnPropNameInRow="Diagnostico" msprop:Generator_ColumnPropNameInTable="DiagnosticoColumn" msprop:Generator_UserColumnName="Diagnostico" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="Datos" msprop:Generator_TableClassName="DatosDataTable" msprop:Generator_TableVarName="tableDatos" msprop:Generator_TablePropName="Datos" msprop:Generator_RowDeletingName="DatosRowDeleting" msprop:Generator_RowChangingName="DatosRowChanging" msprop:Generator_RowEvHandlerName="DatosRowChangeEventHandler" msprop:Generator_RowDeletedName="DatosRowDeleted" msprop:Generator_UserTableName="Datos" msprop:Generator_RowChangedName="DatosRowChanged" msprop:Generator_RowEvArgName="DatosRowChangeEvent" msprop:Generator_RowClassName="DatosRow">
           <xs:complexType>
             <xs:sequence>
@@ -334,48 +360,23 @@ SELECT IdDiagnostico, IdEmpleado, IdPaciente, Diagnostico FROM Diagnostico WHERE
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="AsignarCita" msprop:Generator_TableClassName="AsignarCitaDataTable" msprop:Generator_TableVarName="tableAsignarCita" msprop:Generator_TablePropName="AsignarCita" msprop:Generator_RowDeletingName="AsignarCitaRowDeleting" msprop:Generator_RowChangingName="AsignarCitaRowChanging" msprop:Generator_RowEvHandlerName="AsignarCitaRowChangeEventHandler" msprop:Generator_RowDeletedName="AsignarCitaRowDeleted" msprop:Generator_UserTableName="AsignarCita" msprop:Generator_RowChangedName="AsignarCitaRowChanged" msprop:Generator_RowEvArgName="AsignarCitaRowChangeEvent" msprop:Generator_RowClassName="AsignarCitaRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="IdPaciente" msprop:Generator_ColumnVarNameInTable="columnIdPaciente" msprop:Generator_ColumnPropNameInRow="IdPaciente" msprop:Generator_ColumnPropNameInTable="IdPacienteColumn" msprop:Generator_UserColumnName="IdPaciente" type="xs:long" />
-              <xs:element name="IdEmpleado" msprop:Generator_ColumnVarNameInTable="columnIdEmpleado" msprop:Generator_ColumnPropNameInRow="IdEmpleado" msprop:Generator_ColumnPropNameInTable="IdEmpleadoColumn" msprop:Generator_UserColumnName="IdEmpleado" type="xs:long" minOccurs="0" />
-              <xs:element name="FechaSolicitud" msprop:Generator_ColumnVarNameInTable="columnFechaSolicitud" msprop:Generator_ColumnPropNameInRow="FechaSolicitud" msprop:Generator_ColumnPropNameInTable="FechaSolicitudColumn" msprop:Generator_UserColumnName="FechaSolicitud" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="FechaCita" msprop:Generator_ColumnVarNameInTable="columnFechaCita" msprop:Generator_ColumnPropNameInRow="FechaCita" msprop:Generator_ColumnPropNameInTable="FechaCitaColumn" msprop:Generator_UserColumnName="FechaCita" type="xs:dateTime" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="Diagnostico" msprop:Generator_TableClassName="DiagnosticoDataTable" msprop:Generator_TableVarName="tableDiagnostico" msprop:Generator_TablePropName="Diagnostico" msprop:Generator_RowDeletingName="DiagnosticoRowDeleting" msprop:Generator_RowChangingName="DiagnosticoRowChanging" msprop:Generator_RowEvHandlerName="DiagnosticoRowChangeEventHandler" msprop:Generator_RowDeletedName="DiagnosticoRowDeleted" msprop:Generator_UserTableName="Diagnostico" msprop:Generator_RowChangedName="DiagnosticoRowChanged" msprop:Generator_RowEvArgName="DiagnosticoRowChangeEvent" msprop:Generator_RowClassName="DiagnosticoRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="IdDiagnostico" msprop:Generator_ColumnVarNameInTable="columnIdDiagnostico" msprop:Generator_ColumnPropNameInRow="IdDiagnostico" msprop:Generator_ColumnPropNameInTable="IdDiagnosticoColumn" msprop:Generator_UserColumnName="IdDiagnostico" type="xs:long" />
-              <xs:element name="IdEmpleado" msprop:Generator_ColumnVarNameInTable="columnIdEmpleado" msprop:Generator_ColumnPropNameInRow="IdEmpleado" msprop:Generator_ColumnPropNameInTable="IdEmpleadoColumn" msprop:Generator_UserColumnName="IdEmpleado" type="xs:long" minOccurs="0" />
-              <xs:element name="IdPaciente" msprop:Generator_ColumnVarNameInTable="columnIdPaciente" msprop:Generator_ColumnPropNameInRow="IdPaciente" msprop:Generator_ColumnPropNameInTable="IdPacienteColumn" msprop:Generator_UserColumnName="IdPaciente" type="xs:long" minOccurs="0" />
-              <xs:element name="Diagnostico" msprop:Generator_ColumnVarNameInTable="columnDiagnostico" msprop:Generator_ColumnPropNameInRow="Diagnostico" msprop:Generator_ColumnPropNameInTable="DiagnosticoColumn" msprop:Generator_UserColumnName="Diagnostico" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="TipoUsuario" msprop:Generator_ColumnVarNameInTable="columnTipoUsuario" msprop:Generator_ColumnPropNameInRow="TipoUsuario" msprop:Generator_ColumnPropNameInTable="TipoUsuarioColumn" msprop:Generator_UserColumnName="TipoUsuario" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Datos" />
-      <xs:field xpath="mstns:Usuario" />
-    </xs:unique>
-    <xs:unique name="AsignarCita_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:AsignarCita" />
       <xs:field xpath="mstns:IdPaciente" />
     </xs:unique>
     <xs:unique name="Diagnostico_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Diagnostico" />
       <xs:field xpath="mstns:IdDiagnostico" />
+    </xs:unique>
+    <xs:unique name="Datos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Datos" />
+      <xs:field xpath="mstns:Usuario" />
     </xs:unique>
   </xs:element>
 </xs:schema>

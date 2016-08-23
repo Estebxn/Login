@@ -38,7 +38,9 @@ namespace Presentacion
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Login oLogin = new Login();
+            oLogin.Show();
+            this.Hide();
         }
 
         ValidacionCampos Validar = new ValidacionCampos();
