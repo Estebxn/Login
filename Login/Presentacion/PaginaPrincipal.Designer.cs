@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -46,22 +46,24 @@
             this.lblNombres = new System.Windows.Forms.Label();
             this.lblRegistrate = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.cbxTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label2
+            // lblBienvenido
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(456, 55);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Bienvenido Deseas";
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.Location = new System.Drawing.Point(83, 9);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(456, 55);
+            this.lblBienvenido.TabIndex = 0;
+            this.lblBienvenido.Text = "Bienvenido Deseas";
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(469, 361);
+            this.btnCancel.Location = new System.Drawing.Point(469, 402);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 63;
@@ -71,7 +73,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(335, 361);
+            this.btnLimpiar.Location = new System.Drawing.Point(335, 402);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(103, 23);
             this.btnLimpiar.TabIndex = 62;
@@ -81,7 +83,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(127, 361);
+            this.btnActualizar.Location = new System.Drawing.Point(127, 402);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 61;
@@ -204,7 +206,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(227, 361);
+            this.btnEliminar.Location = new System.Drawing.Point(227, 402);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 64;
@@ -212,10 +214,32 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // cbxTipoUsuario
+            // 
+            this.cbxTipoUsuario.FormattingEnabled = true;
+            this.cbxTipoUsuario.Items.AddRange(new object[] {
+            "Doctor",
+            "Paciente"});
+            this.cbxTipoUsuario.Location = new System.Drawing.Point(317, 334);
+            this.cbxTipoUsuario.Name = "cbxTipoUsuario";
+            this.cbxTipoUsuario.Size = new System.Drawing.Size(121, 21);
+            this.cbxTipoUsuario.TabIndex = 65;
+            // 
+            // lblTipoUsuario
+            // 
+            this.lblTipoUsuario.AutoSize = true;
+            this.lblTipoUsuario.Location = new System.Drawing.Point(224, 342);
+            this.lblTipoUsuario.Name = "lblTipoUsuario";
+            this.lblTipoUsuario.Size = new System.Drawing.Size(84, 13);
+            this.lblTipoUsuario.TabIndex = 66;
+            this.lblTipoUsuario.Text = "Tipo De Usuario";
+            // 
             // frmPaginaPrincipal
             // 
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(657, 413);
+            this.ClientSize = new System.Drawing.Size(644, 466);
+            this.Controls.Add(this.lblTipoUsuario);
+            this.Controls.Add(this.cbxTipoUsuario);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLimpiar);
@@ -233,7 +257,7 @@
             this.Controls.Add(this.lblApellidos);
             this.Controls.Add(this.lblNombres);
             this.Controls.Add(this.lblRegistrate);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblBienvenido);
             this.Name = "frmPaginaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagina Principal";
@@ -247,7 +271,7 @@
         //private Login_1DataSet login_1DataSet;
         private System.Windows.Forms.BindingSource login1DataSetBindingSource;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnActualizar;
@@ -265,5 +289,7 @@
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.Label lblRegistrate;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ComboBox cbxTipoUsuario;
+        private System.Windows.Forms.Label lblTipoUsuario;
     }
 }

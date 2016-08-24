@@ -22,9 +22,9 @@ namespace Logica
         }
 
         private static DatosTableAdapter Adaptador = new DatosTableAdapter();
-        public void Encriptar(string Usuario, string Contraseña)
-        {
-            Adaptador.spr_Encriptacion(Usuario, Contraseña);
-        }
+        //public void Encriptar(string Usuario, string Contraseña)
+        //{
+        //    Adaptador.spr_Encriptacion(Usuario, Contraseña);
+        //}
     }
 }

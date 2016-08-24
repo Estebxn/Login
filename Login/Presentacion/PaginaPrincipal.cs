@@ -21,7 +21,7 @@ namespace Presentacion
         Usuarios oUsuarios = new Usuarios();
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            oUsuarios.ActualizarDatos(txtNombres.Text, txtApellidos.Text, txtTelefono.Text, txtCorreo.Text, txtUser.Text, txtPassword.Text);
+            oUsuarios.ActualizarDatos(txtNombres.Text, txtApellidos.Text, txtTelefono.Text, txtCorreo.Text, txtUser.Text, txtPassword.Text, cbxTipoUsuario.Text);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

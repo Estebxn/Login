@@ -58,8 +58,8 @@ namespace Presentacion
                 txtUser.Focus();
                 return;
             }
-            frmPaginaPrincipal PaginaPrincipal = new frmPaginaPrincipal();
-            PaginaPrincipal.Show();
+            Asignar_Citas PedirCita = new Asignar_Citas();
+            PedirCita.Show();
             this.Hide();
         }
     }

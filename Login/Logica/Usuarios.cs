@@ -15,6 +15,7 @@ namespace Logica
         string Correo;
         string Usuario;
         string Contraseña;
+        string TipoUsuario;
 
         public string Nombres1
         {
@@ -27,6 +28,11 @@ namespace Logica
             {
                 Nombres = value;
             }
+        }
+
+        public void ActualizarDatos(string text1, string text2, string text3, string text4, string text5, string text6, object cbxTipoUsuario)
+        {
+            throw new NotImplementedException();
         }
 
         public string Apellidos1
@@ -94,15 +100,28 @@ namespace Logica
             }
         }
 
-        private static DatosTableAdapter Adaptador = new DatosTableAdapter();
-        public void AgregarUsuario(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña)
+        public string TipoUsuario1
         {
-            Adaptador.spr_InsertarUsuario(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña);
+            get
+            {
+                return TipoUsuario;
+            }
+
+            set
+            {
+                TipoUsuario = value;
+            }
         }
 
-        public void ActualizarDatos(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña)
+        private static DatosTableAdapter Adaptador = new DatosTableAdapter();
+        public void AgregarUsuario(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario)
         {
-            Adaptador.spr_ActualizarDatos(Nombres, Apellidos, Telefono, Correo, Contraseña, Usuario);
+            Adaptador.spr_AgregarUsuarios(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña, TipoUsuario);
+        }
+
+        public void ActualizarDatos(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario)
+        {
+            Adaptador.spr_ActualizarDatos(Nombres, Apellidos, Telefono, Correo, Contraseña, TipoUsuario, Usuario);
         }
 
         public void EliminarUsuarios(string Usuario)

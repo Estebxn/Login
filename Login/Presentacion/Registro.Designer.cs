@@ -44,8 +44,8 @@
             this.lblApellidos = new System.Windows.Forms.Label();
             this.lblNombres = new System.Windows.Forms.Label();
             this.lblRegistrate = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblTipoUsuario = new System.Windows.Forms.Label();
+            this.cbxTipoUsuario = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -192,25 +192,26 @@
             this.lblRegistrate.TabIndex = 32;
             this.lblRegistrate.Text = "Registrate Aqui";
             // 
-            // label1
+            // lblTipoUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(174, 343);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Tipo De Usuario";
+            this.lblTipoUsuario.AutoSize = true;
+            this.lblTipoUsuario.Location = new System.Drawing.Point(174, 343);
+            this.lblTipoUsuario.Name = "lblTipoUsuario";
+            this.lblTipoUsuario.Size = new System.Drawing.Size(84, 13);
+            this.lblTipoUsuario.TabIndex = 48;
+            this.lblTipoUsuario.Text = "Tipo De Usuario";
             // 
-            // comboBox1
+            // cbxTipoUsuario
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxTipoUsuario.FormattingEnabled = true;
+            this.cbxTipoUsuario.Items.AddRange(new object[] {
             "Doctor",
             "Paciente"});
-            this.comboBox1.Location = new System.Drawing.Point(274, 335);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 49;
+            this.cbxTipoUsuario.Location = new System.Drawing.Point(274, 335);
+            this.cbxTipoUsuario.Name = "cbxTipoUsuario";
+            this.cbxTipoUsuario.Size = new System.Drawing.Size(121, 21);
+            this.cbxTipoUsuario.TabIndex = 49;
+            this.cbxTipoUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxTipoUsuario_KeyPress);
             // 
             // frmRegistro
             // 
@@ -219,8 +220,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(611, 509);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbxTipoUsuario);
+            this.Controls.Add(this.lblTipoUsuario);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnRegistrar);
@@ -263,7 +264,7 @@
         private System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.Label lblRegistrate;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblTipoUsuario;
+        private System.Windows.Forms.ComboBox cbxTipoUsuario;
     }
 }
