@@ -34,13 +34,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdPaciente = new System.Windows.Forms.TextBox();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaSolicitud = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
             this.btnPedirCita = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditarDatos = new System.Windows.Forms.Button();
             this.btnCancelarCita = new System.Windows.Forms.Button();
             this.btnModicarCita = new System.Windows.Forms.Button();
+            this.lblHoraCita = new System.Windows.Forms.Label();
+            this.cbxHoraCita = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -93,32 +95,33 @@
             this.txtIdEmpleado.Size = new System.Drawing.Size(100, 20);
             this.txtIdEmpleado.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // dtpFechaSolicitud
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(172, 180);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtpFechaSolicitud.Location = new System.Drawing.Point(172, 180);
+            this.dtpFechaSolicitud.Name = "dtpFechaSolicitud";
+            this.dtpFechaSolicitud.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaSolicitud.TabIndex = 6;
             // 
-            // dateTimePicker2
+            // dtpFechaCita
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(172, 230);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 7;
+            this.dtpFechaCita.Location = new System.Drawing.Point(172, 230);
+            this.dtpFechaCita.Name = "dtpFechaCita";
+            this.dtpFechaCita.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaCita.TabIndex = 7;
             // 
             // btnPedirCita
             // 
-            this.btnPedirCita.Location = new System.Drawing.Point(80, 324);
+            this.btnPedirCita.Location = new System.Drawing.Point(80, 357);
             this.btnPedirCita.Name = "btnPedirCita";
             this.btnPedirCita.Size = new System.Drawing.Size(75, 23);
             this.btnPedirCita.TabIndex = 8;
             this.btnPedirCita.Text = "&Pedir Cita";
             this.btnPedirCita.UseVisualStyleBackColor = true;
+            this.btnPedirCita.Click += new System.EventHandler(this.btnPedirCita_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(387, 324);
+            this.btnCancelar.Location = new System.Drawing.Point(387, 357);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 9;
@@ -138,34 +141,80 @@
             // 
             // btnCancelarCita
             // 
-            this.btnCancelarCita.Location = new System.Drawing.Point(273, 324);
+            this.btnCancelarCita.Location = new System.Drawing.Point(273, 357);
             this.btnCancelarCita.Name = "btnCancelarCita";
             this.btnCancelarCita.Size = new System.Drawing.Size(99, 23);
             this.btnCancelarCita.TabIndex = 11;
             this.btnCancelarCita.Text = "&Cancelar Cita";
             this.btnCancelarCita.UseVisualStyleBackColor = true;
+            this.btnCancelarCita.Click += new System.EventHandler(this.btnCancelarCita_Click);
             // 
             // btnModicarCita
             // 
-            this.btnModicarCita.Location = new System.Drawing.Point(172, 324);
+            this.btnModicarCita.Location = new System.Drawing.Point(172, 357);
             this.btnModicarCita.Name = "btnModicarCita";
             this.btnModicarCita.Size = new System.Drawing.Size(89, 23);
             this.btnModicarCita.TabIndex = 12;
             this.btnModicarCita.Text = "&Modificar Cita";
             this.btnModicarCita.UseVisualStyleBackColor = true;
             // 
+            // lblHoraCita
+            // 
+            this.lblHoraCita.AutoSize = true;
+            this.lblHoraCita.Location = new System.Drawing.Point(99, 291);
+            this.lblHoraCita.Name = "lblHoraCita";
+            this.lblHoraCita.Size = new System.Drawing.Size(51, 13);
+            this.lblHoraCita.TabIndex = 13;
+            this.lblHoraCita.Text = "Hora Cita";
+            // 
+            // cbxHoraCita
+            // 
+            this.cbxHoraCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxHoraCita.FormattingEnabled = true;
+            this.cbxHoraCita.Items.AddRange(new object[] {
+            "0:00",
+            "1:00",
+            "2:00",
+            "3:00",
+            "4:00",
+            "5:00",
+            "6:00",
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00"});
+            this.cbxHoraCita.Location = new System.Drawing.Point(172, 283);
+            this.cbxHoraCita.Name = "cbxHoraCita";
+            this.cbxHoraCita.Size = new System.Drawing.Size(121, 21);
+            this.cbxHoraCita.TabIndex = 14;
+            // 
             // Asignar_Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 401);
+            this.ClientSize = new System.Drawing.Size(554, 459);
+            this.Controls.Add(this.cbxHoraCita);
+            this.Controls.Add(this.lblHoraCita);
             this.Controls.Add(this.btnModicarCita);
             this.Controls.Add(this.btnCancelarCita);
             this.Controls.Add(this.btnEditarDatos);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnPedirCita);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFechaCita);
+            this.Controls.Add(this.dtpFechaSolicitud);
             this.Controls.Add(this.txtIdEmpleado);
             this.Controls.Add(this.txtIdPaciente);
             this.Controls.Add(this.label4);
@@ -188,12 +237,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdPaciente;
         private System.Windows.Forms.TextBox txtIdEmpleado;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpFechaSolicitud;
+        private System.Windows.Forms.DateTimePicker dtpFechaCita;
         private System.Windows.Forms.Button btnPedirCita;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditarDatos;
         private System.Windows.Forms.Button btnCancelarCita;
         private System.Windows.Forms.Button btnModicarCita;
+        private System.Windows.Forms.Label lblHoraCita;
+        private System.Windows.Forms.ComboBox cbxHoraCita;
     }
 }

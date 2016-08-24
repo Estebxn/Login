@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,17 @@ namespace Presentacion
             frmPaginaPrincipal Perfil = new frmPaginaPrincipal();
             Perfil.Show();
             this.Hide();
+        }
+
+        Citas Cita = new Citas();
+        private void btnPedirCita_Click(object sender, EventArgs e)
+        {
+            Cita.PedirCita(long.Parse(txtIdPaciente.Text), long.Parse(txtIdEmpleado.Text), DateTime.Parse(dtpFechaSolicitud.Text), DateTime.Parse(dtpFechaCita.Text),  TimeSpan.Parse (cbxHoraCita.Text));
+        }
+
+        private void btnCancelarCita_Click(object sender, EventArgs e)
+        {
+            Cita.CancelarCita(long.Parse(txtIdPaciente.Text));
         }
     }
 }
