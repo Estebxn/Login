@@ -1,15 +1,17 @@
-﻿namespace Datos_1
+﻿using System;
+
+namespace Datos_1
 {
 
 
     partial class DSLogin
     {
-    }
-}
+        partial class AsignarCitaDataTable
+        {
+        }
 
-namespace Datos_1.DSLoginTableAdapters {
-    
-    
-    public partial class DatosTableAdapter {
+        partial class DatosDataTable
+        {
+        }
     }
 }

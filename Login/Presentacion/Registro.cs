@@ -18,16 +18,17 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        Usuarios oUsuaarios = new Usuarios();
+        Usuarios oUsuarios = new Usuarios();
         Encriptacion Encriptar = new Encriptacion();
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            oUsuaarios.AgregarUsuario(txtNombres.Text, txtApellidos.Text, txtTelefono.Text, txtCorreo.Text, txtUser.Text, txtPassword.Text, cbxTipoUsuario.Text);
+            oUsuarios.AgregarUsuario(long.Parse(txtIdUsuario.Text), txtNombres.Text, txtApellidos.Text, txtTelefono.Text, txtCorreo.Text, txtUser.Text, txtPassword.Text, cbxTipoUsuario.Text);
             //Encriptar.Encriptar(txtUser.Text, Encriptacion.GetMD5(txtPassword.Text));
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            txtIdUsuario.Clear();   
             txtNombres.Clear();
             txtApellidos.Clear();
             txtTelefono.Clear();
@@ -77,6 +78,21 @@ namespace Presentacion
         private void cbxTipoUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.Letras(e);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.Numeros(e);
+        }
+
+        private void txtIdUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

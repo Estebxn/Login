@@ -46,6 +46,8 @@
             this.lblRegistrate = new System.Windows.Forms.Label();
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.cbxTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.lblIdUsuario = new System.Windows.Forms.Label();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -106,7 +108,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(122, 280);
+            this.txtTelefono.Location = new System.Drawing.Point(122, 324);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 41;
@@ -114,7 +116,7 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(122, 233);
+            this.txtApellidos.Location = new System.Drawing.Point(122, 277);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(100, 20);
             this.txtApellidos.TabIndex = 40;
@@ -122,7 +124,7 @@
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(122, 180);
+            this.txtNombres.Location = new System.Drawing.Point(122, 224);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(100, 20);
             this.txtNombres.TabIndex = 39;
@@ -149,7 +151,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(395, 180);
+            this.lblCorreo.Location = new System.Drawing.Point(390, 187);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(38, 13);
             this.lblCorreo.TabIndex = 36;
@@ -158,7 +160,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(67, 287);
+            this.lblTelefono.Location = new System.Drawing.Point(67, 331);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 35;
@@ -167,7 +169,7 @@
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Location = new System.Drawing.Point(67, 233);
+            this.lblApellidos.Location = new System.Drawing.Point(67, 277);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(49, 13);
             this.lblApellidos.TabIndex = 34;
@@ -176,7 +178,7 @@
             // lblNombres
             // 
             this.lblNombres.AutoSize = true;
-            this.lblNombres.Location = new System.Drawing.Point(67, 180);
+            this.lblNombres.Location = new System.Drawing.Point(67, 224);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(49, 13);
             this.lblNombres.TabIndex = 33;
@@ -195,7 +197,7 @@
             // lblTipoUsuario
             // 
             this.lblTipoUsuario.AutoSize = true;
-            this.lblTipoUsuario.Location = new System.Drawing.Point(174, 343);
+            this.lblTipoUsuario.Location = new System.Drawing.Point(339, 335);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
             this.lblTipoUsuario.Size = new System.Drawing.Size(84, 13);
             this.lblTipoUsuario.TabIndex = 48;
@@ -207,11 +209,30 @@
             this.cbxTipoUsuario.Items.AddRange(new object[] {
             "Doctor",
             "Paciente"});
-            this.cbxTipoUsuario.Location = new System.Drawing.Point(274, 335);
+            this.cbxTipoUsuario.Location = new System.Drawing.Point(439, 327);
             this.cbxTipoUsuario.Name = "cbxTipoUsuario";
             this.cbxTipoUsuario.Size = new System.Drawing.Size(121, 21);
             this.cbxTipoUsuario.TabIndex = 49;
             this.cbxTipoUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxTipoUsuario_KeyPress);
+            // 
+            // lblIdUsuario
+            // 
+            this.lblIdUsuario.AutoSize = true;
+            this.lblIdUsuario.Location = new System.Drawing.Point(61, 180);
+            this.lblIdUsuario.Name = "lblIdUsuario";
+            this.lblIdUsuario.Size = new System.Drawing.Size(55, 13);
+            this.lblIdUsuario.TabIndex = 50;
+            this.lblIdUsuario.Text = "Id Usuario";
+            this.lblIdUsuario.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtIdUsuario
+            // 
+            this.txtIdUsuario.Location = new System.Drawing.Point(122, 180);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtIdUsuario.TabIndex = 51;
+            this.txtIdUsuario.TextChanged += new System.EventHandler(this.txtIdUsuario_TextChanged);
+            this.txtIdUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdUsuario_KeyPress);
             // 
             // frmRegistro
             // 
@@ -220,6 +241,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(611, 509);
+            this.Controls.Add(this.txtIdUsuario);
+            this.Controls.Add(this.lblIdUsuario);
             this.Controls.Add(this.cbxTipoUsuario);
             this.Controls.Add(this.lblTipoUsuario);
             this.Controls.Add(this.btnCancel);
@@ -266,5 +289,7 @@
         private System.Windows.Forms.Label lblRegistrate;
         private System.Windows.Forms.Label lblTipoUsuario;
         private System.Windows.Forms.ComboBox cbxTipoUsuario;
+        private System.Windows.Forms.Label lblIdUsuario;
+        private System.Windows.Forms.TextBox txtIdUsuario;
     }
 }

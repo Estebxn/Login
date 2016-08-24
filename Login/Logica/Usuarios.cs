@@ -9,6 +9,7 @@ namespace Logica
 {
     public class Usuarios
     {
+        long IdUsuario;
         string Nombres;
         string Apellidos;
         long Telefono;
@@ -16,6 +17,21 @@ namespace Logica
         string Usuario;
         string Contraseña;
         string TipoUsuario;
+
+        private static DatosTableAdapter Adaptador = new DatosTableAdapter();
+
+        public long IdUsuario1
+        {
+            get
+            {
+                return IdUsuario;
+            }
+
+            set
+            {
+                IdUsuario = value;
+            }
+        }
 
         public string Nombres1
         {
@@ -28,11 +44,6 @@ namespace Logica
             {
                 Nombres = value;
             }
-        }
-
-        public void ActualizarDatos(string text1, string text2, string text3, string text4, string text5, string text6, object cbxTipoUsuario)
-        {
-            throw new NotImplementedException();
         }
 
         public string Apellidos1
@@ -113,20 +124,19 @@ namespace Logica
             }
         }
 
-        private static DatosTableAdapter Adaptador = new DatosTableAdapter();
-        public void AgregarUsuario(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario)
+        public void AgregarUsuario(long idUsuario, string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario)
         {
-            Adaptador.spr_AgregarUsuarios(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña, TipoUsuario);
+            Adaptador.spr_AgregarUsuarios(idUsuario, Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña);
         }
 
-        public void ActualizarDatos(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario)
+        public void ActualizarDatos(long IdUsuario, string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario)
         {
-            Adaptador.spr_ActualizarDatos(Nombres, Apellidos, Telefono, Correo, Contraseña, TipoUsuario, Usuario);
+            Adaptador.spr_ActualizarDatos(Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña, TipoUsuario, IdUsuario);
         }
 
-        public void EliminarUsuarios(string Usuario)
+        public void EliminarUsuarios(long IdUsuario)
         {
-            Adaptador.spr_EliminarUsuarios(Usuario);
+            Adaptador.spr_EliminarUsuarios(IdUsuario);
         }
     }
 }

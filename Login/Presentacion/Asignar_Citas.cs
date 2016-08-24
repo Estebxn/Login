@@ -16,5 +16,22 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void Asignar_Citas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnEditarDatos_Click(object sender, EventArgs e)
+        {
+            frmPaginaPrincipal Perfil = new frmPaginaPrincipal();
+            Perfil.Show();
+            this.Hide();
+        }
     }
 }

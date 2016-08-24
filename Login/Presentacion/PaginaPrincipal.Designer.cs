@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblBienvenido = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -48,6 +48,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.cbxTipoUsuario = new System.Windows.Forms.ComboBox();
             this.lblTipoUsuario = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblIdUsuario = new System.Windows.Forms.Label();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblBienvenido
@@ -60,16 +63,16 @@
             this.lblBienvenido.TabIndex = 0;
             this.lblBienvenido.Text = "Bienvenido Deseas";
             // 
-            // btnCancel
+            // btnAtras
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(469, 402);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 63;
-            this.btnCancel.Text = "&Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnAtras.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAtras.Location = new System.Drawing.Point(469, 402);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.TabIndex = 63;
+            this.btnAtras.Text = "&Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnLimpiar
             // 
@@ -118,7 +121,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(127, 277);
+            this.txtTelefono.Location = new System.Drawing.Point(127, 323);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 57;
@@ -126,7 +129,7 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(127, 230);
+            this.txtApellidos.Location = new System.Drawing.Point(127, 276);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(100, 20);
             this.txtApellidos.TabIndex = 56;
@@ -134,7 +137,7 @@
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(127, 177);
+            this.txtNombres.Location = new System.Drawing.Point(127, 230);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(100, 20);
             this.txtNombres.TabIndex = 55;
@@ -170,7 +173,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(72, 284);
+            this.lblTelefono.Location = new System.Drawing.Point(72, 330);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 51;
@@ -179,7 +182,7 @@
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Location = new System.Drawing.Point(72, 230);
+            this.lblApellidos.Location = new System.Drawing.Point(72, 276);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(49, 13);
             this.lblApellidos.TabIndex = 50;
@@ -188,7 +191,7 @@
             // lblNombres
             // 
             this.lblNombres.AutoSize = true;
-            this.lblNombres.Location = new System.Drawing.Point(72, 177);
+            this.lblNombres.Location = new System.Drawing.Point(72, 230);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(49, 13);
             this.lblNombres.TabIndex = 49;
@@ -220,28 +223,58 @@
             this.cbxTipoUsuario.Items.AddRange(new object[] {
             "Doctor",
             "Paciente"});
-            this.cbxTipoUsuario.Location = new System.Drawing.Point(317, 334);
+            this.cbxTipoUsuario.Location = new System.Drawing.Point(444, 334);
             this.cbxTipoUsuario.Name = "cbxTipoUsuario";
             this.cbxTipoUsuario.Size = new System.Drawing.Size(121, 21);
             this.cbxTipoUsuario.TabIndex = 65;
+            this.cbxTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cbxTipoUsuario_SelectedIndexChanged);
             // 
             // lblTipoUsuario
             // 
             this.lblTipoUsuario.AutoSize = true;
-            this.lblTipoUsuario.Location = new System.Drawing.Point(224, 342);
+            this.lblTipoUsuario.Location = new System.Drawing.Point(351, 342);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
             this.lblTipoUsuario.Size = new System.Drawing.Size(84, 13);
             this.lblTipoUsuario.TabIndex = 66;
             this.lblTipoUsuario.Text = "Tipo De Usuario";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 67;
+            this.label2.Text = "label2";
+            // 
+            // lblIdUsuario
+            // 
+            this.lblIdUsuario.AutoSize = true;
+            this.lblIdUsuario.Location = new System.Drawing.Point(66, 184);
+            this.lblIdUsuario.Name = "lblIdUsuario";
+            this.lblIdUsuario.Size = new System.Drawing.Size(55, 13);
+            this.lblIdUsuario.TabIndex = 68;
+            this.lblIdUsuario.Text = "Id Usuario";
+            // 
+            // txtIdUsuario
+            // 
+            this.txtIdUsuario.Location = new System.Drawing.Point(127, 184);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtIdUsuario.TabIndex = 69;
+            this.txtIdUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdUsuario_KeyPress);
+            // 
             // frmPaginaPrincipal
             // 
-            this.CancelButton = this.btnCancel;
+            this.CancelButton = this.btnAtras;
             this.ClientSize = new System.Drawing.Size(644, 466);
+            this.Controls.Add(this.txtIdUsuario);
+            this.Controls.Add(this.lblIdUsuario);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTipoUsuario);
             this.Controls.Add(this.cbxTipoUsuario);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txtPassword);
@@ -272,7 +305,7 @@
         private System.Windows.Forms.BindingSource login1DataSetBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblBienvenido;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.TextBox txtPassword;
@@ -291,5 +324,8 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ComboBox cbxTipoUsuario;
         private System.Windows.Forms.Label lblTipoUsuario;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblIdUsuario;
+        private System.Windows.Forms.TextBox txtIdUsuario;
     }
 }

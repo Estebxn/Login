@@ -20,7 +20,7 @@ namespace Presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         frmRegistro oRegistro = new frmRegistro();
@@ -58,6 +58,7 @@ namespace Presentacion
                 txtUser.Focus();
                 return;
             }
+            //Diagnostico Diagnostico = new Diagnostico();
             Asignar_Citas PedirCita = new Asignar_Citas();
             PedirCita.Show();
             this.Hide();

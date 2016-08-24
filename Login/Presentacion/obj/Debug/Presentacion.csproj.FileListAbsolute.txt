@@ -43,3 +43,5 @@ C:\Users\SOPORTEPQ\Source\Repos\Login_12\Login\Presentacion\obj\Debug\Presentaci
 C:\Users\SOPORTEPQ\Source\Repos\Login_12\Login\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
 C:\Users\SOPORTEPQ\Source\Repos\Login_12\Login\Presentacion\obj\Debug\Presentacion.Asignar_Citas.resources
 C:\Users\SOPORTEPQ\Source\Repos\Login_12\Login\Presentacion\obj\Debug\Presentacion.Diagnostico.resources
+C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.Asignar_Citas.resources
+C:\Users\SOPORTEPQ\Source\Repos\Login_1\Login\Presentacion\obj\Debug\Presentacion.Diagnostico.resources
