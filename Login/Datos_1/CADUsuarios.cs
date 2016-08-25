@@ -14,7 +14,7 @@ namespace Datos_1
         {
 
 
-            if (adaptador.spr_Autenticacion(Usuario, Contraseña) == null)
+            if (adaptador.spr_Login(Usuario, Contraseña) == null)
             {
                 return false;
             }

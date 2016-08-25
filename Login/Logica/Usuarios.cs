@@ -126,7 +126,7 @@ namespace Logica
 
         public void AgregarUsuario(long idUsuario, string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario)
         {
-            Adaptador.spr_AgregarUsuarios(idUsuario, Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña);
+            Adaptador.spr_AgregarUsuarios(idUsuario, Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña, TipoUsuario);
         }
 
         public void ActualizarDatos(long IdUsuario, string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario)

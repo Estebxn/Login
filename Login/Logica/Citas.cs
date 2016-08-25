@@ -86,6 +86,11 @@ namespace Logica
         {
             Adaptador.spr_AgregarCitas(IdPaciente, IdPaciente, FechaSolicitud, FechaCita, HoraCita);
         }
+
+        public void ModificarCita(long IdPaciente, long IdEmpleado, DateTime FechaSolicitud, DateTime FechaCita, TimeSpan HoraCita)
+        {
+            Adaptador.spr_ActualizarCita(IdEmpleado, FechaSolicitud, FechaCita, HoraCita, IdPaciente);
+        }
         public void CancelarCita(long IdPaciente)
         {
             Adaptador.spr_CancelarCita(IdPaciente);

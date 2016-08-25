@@ -16,5 +16,10 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void Diagnostico_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

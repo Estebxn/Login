@@ -45,5 +45,10 @@ namespace Presentacion
         {
             Cita.CancelarCita(long.Parse(txtIdPaciente.Text));
         }
+
+        private void btnModicarCita_Click(object sender, EventArgs e)
+        {
+            Cita.ModificarCita(long.Parse(txtIdPaciente.Text), long.Parse(txtIdEmpleado.Text), DateTime.Parse(dtpFechaSolicitud.Text), DateTime.Parse(dtpFechaCita.Text), TimeSpan.Parse(cbxHoraCita.Text));
+        }
     }
 }
