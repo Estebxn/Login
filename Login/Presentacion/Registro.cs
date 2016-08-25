@@ -22,8 +22,7 @@ namespace Presentacion
         //Encriptacion Encriptar = new Encriptacion();
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            oUsuarios.AgregarUsuario(long.Parse(txtIdUsuario.Text), txtNombres.Text, txtApellidos.Text, txtTelefono.Text, txtCorreo.Text, txtUser.Text, txtPassword.Text, cbxTipoUsuario.Text);
-            //Encriptar.Encriptar(txtUser.Text, Encriptacion.GetMD5(txtPassword.Text));
+            oUsuarios.AgregarUsuario(long.Parse(txtIdUsuario.Text), txtNombres.Text, txtApellidos.Text, txtTelefono.Text, txtCorreo.Text, txtUser.Text, Encriptacion.GetMD5(txtPassword.Text), cbxTipoUsuario.Text);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

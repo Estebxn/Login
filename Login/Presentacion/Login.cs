@@ -1,4 +1,5 @@
 ﻿using Datos_1;
+using Datos_1.DSLoginTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,7 @@ namespace Presentacion
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            DatosTableAdapter Adaptador = new DatosTableAdapter();
             if (txtUser.Text == "")
             {
                 errorProvider1.SetError(txtUser, "Debe ingresar un Usuario");
@@ -58,10 +60,24 @@ namespace Presentacion
                 txtUser.Focus();
                 return;
             }
-            //Diagnostico Diagnostico = new Diagnostico();
-            Asignar_Citas PedirCita = new Asignar_Citas();
-            PedirCita.Show();
-            this.Hide();
+            else
+            {
+                if (Adaptador.spr_Login(txtUser.Text, txtPassword.Text).ToString() == "Paciente")
+                {
+                    Asignar_Citas PedirCita = new Asignar_Citas();
+                    PedirCita.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    if(Adaptador.spr_Login(txtUser.Text, txtPassword.Text).ToString() == "Doctor")
+                    {
+                        Diagnostico Diagnostico = new Diagnostico();
+                        Diagnostico.Show();
+                        this.Hide();
+                    }
+                }
+            }
         }
     }
 }

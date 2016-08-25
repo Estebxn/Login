@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblInicioSesion = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -44,12 +45,12 @@
             // lblInicioSesion
             // 
             this.lblInicioSesion.AutoSize = true;
-            this.lblInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInicioSesion.Location = new System.Drawing.Point(12, 28);
+            this.lblInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicioSesion.Location = new System.Drawing.Point(65, 37);
             this.lblInicioSesion.Name = "lblInicioSesion";
-            this.lblInicioSesion.Size = new System.Drawing.Size(295, 37);
+            this.lblInicioSesion.Size = new System.Drawing.Size(242, 55);
             this.lblInicioSesion.TabIndex = 0;
-            this.lblInicioSesion.Text = "Inicia Sesion En C#";
+            this.lblInicioSesion.Text = "Clinica C#";
             // 
             // lblUser
             // 
@@ -124,6 +125,8 @@
             this.AcceptButton = this.btnEntrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(364, 336);
             this.Controls.Add(this.btnSalir);
@@ -135,6 +138,7 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblInicioSesion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

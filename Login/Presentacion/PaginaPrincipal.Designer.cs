@@ -48,7 +48,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.cbxTipoUsuario = new System.Windows.Forms.ComboBox();
             this.lblTipoUsuario = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblIdUsuario = new System.Windows.Forms.Label();
             this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -238,15 +237,6 @@
             this.lblTipoUsuario.TabIndex = 66;
             this.lblTipoUsuario.Text = "Tipo De Usuario";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 67;
-            this.label2.Text = "label2";
-            // 
             // lblIdUsuario
             // 
             this.lblIdUsuario.AutoSize = true;
@@ -270,7 +260,6 @@
             this.ClientSize = new System.Drawing.Size(644, 466);
             this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.lblIdUsuario);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTipoUsuario);
             this.Controls.Add(this.cbxTipoUsuario);
             this.Controls.Add(this.btnEliminar);
@@ -324,7 +313,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ComboBox cbxTipoUsuario;
         private System.Windows.Forms.Label lblTipoUsuario;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblIdUsuario;
         private System.Windows.Forms.TextBox txtIdUsuario;
     }

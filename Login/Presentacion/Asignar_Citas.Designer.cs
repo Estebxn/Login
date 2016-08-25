@@ -30,11 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Asignar_Citas));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdPaciente = new System.Windows.Forms.TextBox();
-            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.dtpFechaSolicitud = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
             this.btnPedirCita = new System.Windows.Forms.Button();
@@ -56,19 +54,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id Paciente";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Id Empleado";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 224);
+            this.label3.Location = new System.Drawing.Point(31, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 2;
@@ -77,7 +66,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 281);
+            this.label4.Location = new System.Drawing.Point(50, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 3;
@@ -89,31 +78,25 @@
             this.txtIdPaciente.Name = "txtIdPaciente";
             this.txtIdPaciente.Size = new System.Drawing.Size(100, 20);
             this.txtIdPaciente.TabIndex = 4;
-            // 
-            // txtIdEmpleado
-            // 
-            this.txtIdEmpleado.Location = new System.Drawing.Point(133, 166);
-            this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.txtIdEmpleado.TabIndex = 5;
+            this.txtIdPaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPaciente_KeyPress);
             // 
             // dtpFechaSolicitud
             // 
-            this.dtpFechaSolicitud.Location = new System.Drawing.Point(133, 224);
+            this.dtpFechaSolicitud.Location = new System.Drawing.Point(133, 161);
             this.dtpFechaSolicitud.Name = "dtpFechaSolicitud";
             this.dtpFechaSolicitud.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaSolicitud.TabIndex = 6;
             // 
             // dtpFechaCita
             // 
-            this.dtpFechaCita.Location = new System.Drawing.Point(133, 274);
+            this.dtpFechaCita.Location = new System.Drawing.Point(133, 211);
             this.dtpFechaCita.Name = "dtpFechaCita";
             this.dtpFechaCita.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaCita.TabIndex = 7;
             // 
             // btnPedirCita
             // 
-            this.btnPedirCita.Location = new System.Drawing.Point(41, 401);
+            this.btnPedirCita.Location = new System.Drawing.Point(41, 338);
             this.btnPedirCita.Name = "btnPedirCita";
             this.btnPedirCita.Size = new System.Drawing.Size(75, 23);
             this.btnPedirCita.TabIndex = 8;
@@ -123,7 +106,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(348, 401);
+            this.btnCancelar.Location = new System.Drawing.Point(348, 338);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 9;
@@ -144,7 +127,7 @@
             // 
             // btnCancelarCita
             // 
-            this.btnCancelarCita.Location = new System.Drawing.Point(234, 401);
+            this.btnCancelarCita.Location = new System.Drawing.Point(234, 338);
             this.btnCancelarCita.Name = "btnCancelarCita";
             this.btnCancelarCita.Size = new System.Drawing.Size(99, 23);
             this.btnCancelarCita.TabIndex = 11;
@@ -154,7 +137,7 @@
             // 
             // btnModicarCita
             // 
-            this.btnModicarCita.Location = new System.Drawing.Point(133, 401);
+            this.btnModicarCita.Location = new System.Drawing.Point(133, 338);
             this.btnModicarCita.Name = "btnModicarCita";
             this.btnModicarCita.Size = new System.Drawing.Size(89, 23);
             this.btnModicarCita.TabIndex = 12;
@@ -165,7 +148,7 @@
             // lblHoraCita
             // 
             this.lblHoraCita.AutoSize = true;
-            this.lblHoraCita.Location = new System.Drawing.Point(60, 335);
+            this.lblHoraCita.Location = new System.Drawing.Point(60, 272);
             this.lblHoraCita.Name = "lblHoraCita";
             this.lblHoraCita.Size = new System.Drawing.Size(51, 13);
             this.lblHoraCita.TabIndex = 13;
@@ -200,7 +183,7 @@
             "21:00",
             "22:00",
             "23:00"});
-            this.cbxHoraCita.Location = new System.Drawing.Point(133, 327);
+            this.cbxHoraCita.Location = new System.Drawing.Point(133, 264);
             this.cbxHoraCita.Name = "cbxHoraCita";
             this.cbxHoraCita.Size = new System.Drawing.Size(121, 21);
             this.cbxHoraCita.TabIndex = 14;
@@ -221,7 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(652, 534);
+            this.ClientSize = new System.Drawing.Size(652, 385);
             this.Controls.Add(this.lblAsignarCita);
             this.Controls.Add(this.cbxHoraCita);
             this.Controls.Add(this.lblHoraCita);
@@ -232,12 +215,11 @@
             this.Controls.Add(this.btnPedirCita);
             this.Controls.Add(this.dtpFechaCita);
             this.Controls.Add(this.dtpFechaSolicitud);
-            this.Controls.Add(this.txtIdEmpleado);
             this.Controls.Add(this.txtIdPaciente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Asignar_Citas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asignar_Citas";
@@ -250,11 +232,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdPaciente;
-        private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.DateTimePicker dtpFechaSolicitud;
         private System.Windows.Forms.DateTimePicker dtpFechaCita;
         private System.Windows.Forms.Button btnPedirCita;

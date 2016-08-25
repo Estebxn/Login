@@ -38,7 +38,7 @@ namespace Presentacion
         Citas Cita = new Citas();
         private void btnPedirCita_Click(object sender, EventArgs e)
         {
-            Cita.PedirCita(long.Parse(txtIdPaciente.Text), long.Parse(txtIdEmpleado.Text), DateTime.Parse(dtpFechaSolicitud.Text), DateTime.Parse(dtpFechaCita.Text),  TimeSpan.Parse (cbxHoraCita.Text));
+            Cita.PedirCita(long.Parse(txtIdPaciente.Text), DateTime.Parse(dtpFechaSolicitud.Text), DateTime.Parse(dtpFechaCita.Text),  TimeSpan.Parse (cbxHoraCita.Text));
         }
 
         private void btnCancelarCita_Click(object sender, EventArgs e)
@@ -48,7 +48,18 @@ namespace Presentacion
 
         private void btnModicarCita_Click(object sender, EventArgs e)
         {
-            Cita.ModificarCita(long.Parse(txtIdPaciente.Text), long.Parse(txtIdEmpleado.Text), DateTime.Parse(dtpFechaSolicitud.Text), DateTime.Parse(dtpFechaCita.Text), TimeSpan.Parse(cbxHoraCita.Text));
+            Cita.ModificarCita(long.Parse(txtIdPaciente.Text), DateTime.Parse(dtpFechaSolicitud.Text), DateTime.Parse(dtpFechaCita.Text), TimeSpan.Parse(cbxHoraCita.Text));
+        }
+
+        ValidacionCampos oValidar = new ValidacionCampos();
+        private void txtIdPaciente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            oValidar.Numeros(e);
+        }
+
+        private void txtIdEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            oValidar.Numeros(e);
         }
     }
 }

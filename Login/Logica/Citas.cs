@@ -10,7 +10,6 @@ namespace Logica
     public class Citas
     {
         long IdPaciente;
-        long IdEmpleado;
         DateTime FechaSolicitud;
         DateTime FechaCita;
         TimeSpan HoraCita;
@@ -29,20 +28,6 @@ namespace Logica
                 IdPaciente = value;
             }
         }
-
-        public long IdEmpleado1
-        {
-            get
-            {
-                return IdEmpleado;
-            }
-
-            set
-            {
-                IdEmpleado = value;
-            }
-        }
-
         public DateTime FechaSolicitud1
         {
             get
@@ -82,14 +67,14 @@ namespace Logica
             }
         }
 
-        public void PedirCita(long IdPaciente, long IdEmpleado, DateTime FechaSolicitud, DateTime FechaCita, TimeSpan HoraCita)
+        public void PedirCita(long IdPaciente, DateTime FechaSolicitud, DateTime FechaCita, TimeSpan HoraCita)
         {
-            Adaptador.spr_AgregarCitas(IdPaciente, IdPaciente, FechaSolicitud, FechaCita, HoraCita);
+            Adaptador.spr_AsignarCita(IdPaciente, FechaSolicitud, FechaCita, HoraCita);
         }
 
-        public void ModificarCita(long IdPaciente, long IdEmpleado, DateTime FechaSolicitud, DateTime FechaCita, TimeSpan HoraCita)
+        public void ModificarCita(long IdPaciente, DateTime FechaSolicitud, DateTime FechaCita, TimeSpan HoraCita)
         {
-            Adaptador.spr_ActualizarCita(IdEmpleado, FechaSolicitud, FechaCita, HoraCita, IdPaciente);
+            Adaptador.spr_EditarCita(FechaSolicitud, FechaCita, HoraCita, IdPaciente);
         }
         public void CancelarCita(long IdPaciente)
         {
