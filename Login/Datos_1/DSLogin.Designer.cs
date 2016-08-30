@@ -2023,7 +2023,6 @@ SELECT idUsuario, Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña FRO
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Usuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contraseña", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoUsuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idUsuario", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 19, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
@@ -2360,7 +2359,7 @@ SELECT idUsuario, Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int spr_ActualizarDatos(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, string TipoUsuario, global::System.Nullable<long> idUsuario) {
+        public virtual int spr_ActualizarDatos(string Nombres, string Apellidos, string Telefono, string Correo, string Usuario, string Contraseña, global::System.Nullable<long> idUsuario) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((Nombres == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
@@ -2398,17 +2397,11 @@ SELECT idUsuario, Nombres, Apellidos, Telefono, Correo, Usuario, Contraseña FRO
             else {
                 command.Parameters[6].Value = ((string)(Contraseña));
             }
-            if ((TipoUsuario == null)) {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[7].Value = ((string)(TipoUsuario));
-            }
             if ((idUsuario.HasValue == true)) {
-                command.Parameters[8].Value = ((long)(idUsuario.Value));
+                command.Parameters[7].Value = ((long)(idUsuario.Value));
             }
             else {
-                command.Parameters[8].Value = global::System.DBNull.Value;
+                command.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
