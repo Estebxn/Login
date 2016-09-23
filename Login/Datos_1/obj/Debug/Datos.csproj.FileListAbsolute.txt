@@ -16,3 +16,9 @@ C:\Users\SOPORTEPQ\Source\Repos\Login_12\Login\Datos_1\bin\Debug\Datos_1.pdb
 C:\Users\SOPORTEPQ\Source\Repos\Login_12\Login\Datos_1\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\SOPORTEPQ\Source\Repos\Login_12\Login\Datos_1\obj\Debug\Datos_1.dll
 C:\Users\SOPORTEPQ\Source\Repos\Login_12\Login\Datos_1\obj\Debug\Datos_1.pdb
+C:\Users\GRYFFINDOR\Source\Repos\Login_1\Login\Datos_1\bin\Debug\Datos_1.dll.config
+C:\Users\GRYFFINDOR\Source\Repos\Login_1\Login\Datos_1\bin\Debug\Datos_1.dll
+C:\Users\GRYFFINDOR\Source\Repos\Login_1\Login\Datos_1\bin\Debug\Datos_1.pdb
+C:\Users\GRYFFINDOR\Source\Repos\Login_1\Login\Datos_1\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\GRYFFINDOR\Source\Repos\Login_1\Login\Datos_1\obj\Debug\Datos_1.dll
+C:\Users\GRYFFINDOR\Source\Repos\Login_1\Login\Datos_1\obj\Debug\Datos_1.pdb
